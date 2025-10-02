@@ -124,7 +124,7 @@ def render():
                                 </div>
                                 """, unsafe_allow_html=True)
 
-            st.subheader("Key Advantages Summary")
+            # st.subheader("Key Advantages Summary")
             summary_text = _load_key_advantages_summary()
             if isinstance(summary_text, str) and summary_text.strip():
                 st.markdown(summary_text)

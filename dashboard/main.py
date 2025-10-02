@@ -14,6 +14,7 @@ from sections.social_media_top_posts import render as render_top_posts
 from sections.social_media_clusters import render as render_social_clusters
 from sections.pr_ranking_metrics import render as render_pr_ranking
 from sections.social_media_ranking_metrics import render as render_social_ranking
+from sections.pr_archetypes import render as render_pr_archetypes
 
 from sections.content_pillars import render as render_content_pillars
 
@@ -87,18 +88,28 @@ if section == "Press Releases":
         st.info("No PR data for Retail")
     else:
         render_pr_ranking()
+        st.markdown("---")
+        render_pr_archetypes()
+        st.markdown("---")
         render_matrix()
+        st.markdown("---")
         render_sentiment(mode="by_company")
+        st.markdown("---")
         render_topics()
+        st.markdown("---")
         render_volume(mode="by_company")
+        st.markdown("---")
         render_media_shares(mode="by_brand")
 
 elif section == "Social Media":
     st.title("📱 Social Media Dashboard")
     
     render_social_ranking()
+    st.markdown("---")
     render_social_trends(selected_platforms=["facebook"])
+    st.markdown("---")
     render_top_posts(selected_platforms=["facebook"])
+    st.markdown("---")
     render_social_clusters()
 
 elif section == "Content Pillars":

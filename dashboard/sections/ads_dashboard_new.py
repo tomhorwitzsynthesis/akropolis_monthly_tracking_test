@@ -19,8 +19,13 @@ def render():
     
     # Render all the separate sections
     render_volume_share()
+    st.markdown("---")
     render_brand_summary()
+    st.markdown("---")
     render_archetypes()
+    st.markdown("---")
     render_key_advantages()
+    st.markdown("---")
     render_clusters()
+    st.markdown("---")
     render_volume_trends()
