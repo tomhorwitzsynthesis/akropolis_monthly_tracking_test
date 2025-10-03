@@ -48,12 +48,12 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific - DON'T UPLOAD THESE
-new_data/
-analysis/
 test_*.py
 debug_*.py
-run_analysis*.py
 *.log
+
+# Environment variables
+.env
 
 # Optional: Exclude dashboard_data if too large
 # dashboard_data/
